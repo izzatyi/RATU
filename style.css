@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: var(--white-color) !important;   
+}
+
+ul li a:hover {
+    border: 2px solid transparent;
+    border-top-color: var(--secondry-color);
+    border-bottom-color: var(--secondry-color);
+    color: var(--secondry-color);
+}
+/* ===== Variable Define ===== */
+:root {
+    --primary-color: #e8dcb1;
+    --secondry-color: #333;
+    --white-color: #fff;
+    --black-color: #000;
+    --background-color: #618160;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    font-weight: 400;
+    font-family: 'Dosis', 'sans-serif';
+    background-color: #f3fff4;
+}
+#home img {
+    max-width: 100%; 
+    height: auto;   
+    transition: transform 0.3s ease; 
+}
+
+#home img:hover {
+    transform: scale(1.05);
+}
+
+/* 
+===============================================
+        Custom Scrollbar
+===============================================
+*/
+
+::-webkit-scrollbar {
+    width: 0.3125rem;
+}
+
+::-webkit-scrollbar-track {
+    overscroll-behavior-block: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+/* 
+===============================================
+        Custom CSS Design
+===============================================
+*/
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--background-color);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--background-color);
+    line-height: 2.5rem;
+}
+
+h4 {
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 0.9375rem;
+    transition: all .3s linear;
+}
+
+h5 {
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.1rem;
+    color: var(--background-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.0625rem;
+    opacity: 0.8;
+}
+.header__btns {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: 3px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    border-radius: 2rem;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 700;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.btn span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.hover-btn:hover {
+    background-color: var(--primary-color); 
+    color: var(--black-color); 
+    transform: scale(1.05); 
+    transition: 0.3s ease-in-out;
+}
+
+.hover-btn:hover span {
+    transform: translateX(5px); 
+    transition: 0.3s ease-in-out;
+}
+
+.wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--secondry-color);
+}
+
+.text-content {
+    width: 60%;
+    margin: auto;
+}
+/* 
+===============================================
+    NavBar
+===============================================
+*/
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    text-align: right;
+    background-color: var(--primary-color);
+}
+.navigation-wrap .nav-item {
+    padding: 0 0.5rem;
+    transition: all 200ms linear;
+}
+.navbar-toggler:focus {
+    outline: unset;
+    border: none;
+    box-shadow: none;
+}
+.navigation-wrap .nav-link {
+    padding-top: 0.9375rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--background-color);
+    letter-spacing: 0.0625rem;
+}
+
+.navigation-wrap .nav-link:hover,
+.navigation-wrap .nav-link.active {
+    color: var(--black-color);
+}
+
+/* Cahange navbar styling on scroll */
+.navigation-wrap.scroll-on {
+    position: fixed;
+    background-color: var(--black-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75rem 1 rgb(0, 0, 0, 0.09);
+    transition: all .15s ease-in-out 0s;
+}
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link.active {
+    color: var(--black-color);
+}
+/* 
+===============================================
+    Home
+===============================================
+*/
+#home {
+    background: var(--white-color);
+    height: 100vh;
+    width: 100%;
+}
+.home-tagline h1 {
+    padding-top: 40px;
+    color: var(--background-color);
+    font-weight: 1000;
+    font-size: 90px;
+    line-height: 90px;
+}
+.home-tagline span {
+    color: #e8dcb1;
+}
+.home-tagline p {
+    font-size: 16px;
+    color: var(--background-color);
+    margin-bottom: 40px;
+    margin-top: 20px;
+    line-height: 25px;
+    width: 85%;
+}
+.header__btns {
+    display: flex;
+    gap: 20px;
+}
+.row.h-100 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+/* 
+===============================================
+    strategy
+===============================================
+*/
+#strategy {
+    padding: 20px;
+}
+.strategy .wrapper h2 {
+    padding: 20px;
+}
+.strategy .wrapper {
+    background-color: var(--white-color);
+}
+/* Tab Nav Styles */
+.strategy .nav-tabs .nav-link {
+    display: block;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 30px;
+    border: 3px solid #e8dcb1;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    color: #e8dcb1;
+    text-transform: uppercase;
+}
+
+.strategy .nav-tabs .nav-link:hover,
+.strategy .nav-tabs .nav-link.active {
+    background-color: var(--primary-color); 
+    color: var(--background-color); 
+    transform: scale(1.05); 
+    transition: 0.3s ease-in-out;
+}
+
+.strategy .nav-tabs {
+    border: 0;
+    justify-content: center;
+}
+/* 
+===============================================
+    business model
+===============================================
+*/
+#model-business {
+    padding: 20px 0;
+    background-color: var(--white-color); /* Sesuaikan warna background */
+}
+
+/* Menjadikan row sebagai flex container */
+#model-business .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Mengatur konten agar selalu berada di tengah */
+}
+
+/* Business Box Flex */
+.business-box {
+    padding: 20px;
+    background-color: #e8dcb1; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border:3px solid var(--background-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100%; 
+}
+
+.business-image {
+    width: auto; 
+    height: auto; 
+    max-width: 100%;
+    max-height: 150px; 
+    border-radius: 10px; 
+    margin-bottom: 15px;
+}
+
+.business-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--black-color); 
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.business-box p {
+    font-size: 14px;
+    color: var(--black-color);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.business-box:hover {
+    background-color: var(--black-color);
+    transform: translateY(-10px);
+    box-shadow: #e8dcb1;
+}
+.business-box:hover h3,
+.business-box:hover p {
+    color: var(--white-color) !important; 
+}
+
+.latar_belakang{
+    background: white;
+}
+
+.latar_belakang .row{
+    padding-top: 0;
+}
+
+.latar_belakang img{
+    width: 20%;
+}
+
+.latar_belakang .col{
+    padding: 0;
+    margin: 0;
+}
+
+.custom-popover-2 {
+    
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: var(--secondry-color);
+    --bs-popover-header-bg: var(--secondry-color);
+    --bs-popover-header-color:black;
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+}
+
+.custom-popover {
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: #425841;
+    --bs-popover-header-bg: #618160;
+    --bs-popover-header-color:black;
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+}
+.latar_belakang-1 h2 {
+    padding: 40px;
+    text-align: center;
+    font-size: 2rem;
+}
+/* Flexbox agar semua colom sama tinggi */
+@media (min-width: 768px) {
+    .col-md-4 {
+        display: flex;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-box {
+        margin-bottom: 30px;
+    }
+
+    .business-image {
+        max-width: 100px; /* Gambar lebih kecil di layar kecil */
+    }
+}
+
